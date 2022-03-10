@@ -21,3 +21,19 @@ def ewa(request):
 def name_view(request, name):
     msg = f"Cześć, {name.title()}!"
     return HttpResponse(msg)
+
+
+def hello_app(request):
+    return HttpResponse("Wszystko gra!")
+
+
+def hello2(request):
+    content = "<!DOCUMENT html><html><head><body><h1> Witaj, świecie>"
+    return HttpResponse(content)
+
+
+def hello3(request):
+    return render(
+        request,
+        'hello.html'
+    )
