@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # local
     'intro.apps.IntroConfig',
     'draw.apps.DrawConfig',
+    'newyear.apps.NewyearConfig',
 ]
 
 MIDDLEWARE = [

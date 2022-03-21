@@ -56,3 +56,13 @@ def card(request):
         request,
         'intro/card.html'
     )
+
+
+def name_view_2(request, name):
+    return render(
+        request,
+        'intro/hello2.html',
+        context={
+            "name": name
+        }
+    )
