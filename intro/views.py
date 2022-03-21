@@ -49,3 +49,10 @@ def hello3(request):
         request,
         'intro/hello.html'
     )
+
+
+def card(request):
+    return render(
+        request,
+        'intro/card.html'
+    )

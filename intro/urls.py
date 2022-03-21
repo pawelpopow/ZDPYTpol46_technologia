@@ -10,5 +10,6 @@ urlpatterns = [
     path('adam/', views.adam),
     path('ewa/', views.ewa),
     path('hello/thought/', views.hello_app),
+    path('card/', views.card)
     path('<str:name>/', views.name_view),
 ]
