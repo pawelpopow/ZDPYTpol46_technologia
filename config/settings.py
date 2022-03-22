@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'intro.apps.IntroConfig',
     'draw.apps.DrawConfig',
     'newyear.apps.NewyearConfig',
+    'mem.apps.MemConfig',
 ]
 
 MIDDLEWARE = [

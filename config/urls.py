@@ -21,4 +21,5 @@ urlpatterns = [
     path('intro/', include('intro.urls')),
     path('draw/', include('draw.urls')),
     path('isitnewyear/', include('newyear.urls')),
+    path('mem/', include('mem.urls')),
 ]
