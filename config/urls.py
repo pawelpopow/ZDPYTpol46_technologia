@@ -23,4 +23,5 @@ urlpatterns = [
     path('isitnewyear/', include('newyear.urls')),
     path('mem/', include('mem.urls')),
     path('link/', include('linkapp.urls')),
+    path('formapp/', include('formapp.urls')),
 ]
