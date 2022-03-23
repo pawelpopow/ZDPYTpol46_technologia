@@ -6,6 +6,6 @@ app_name = 'formapp'
 
 urlpatterns = [
     path('name-get/', views.name_get, name='name_get'),
-    path('name-post/', views.name_get, name='name_post'),
-    path('hello/<str:mame>/', views.hello, name='hello'),
+    path('name-post/', views.name_post, name='name_post'),
+    path('hello/<str:name>/', views.hello, name='hello'),
 ]
