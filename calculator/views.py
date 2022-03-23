@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def add(request):
@@ -22,6 +22,9 @@ def add(request):
         )
 
 
+from django.shortcuts import render, redirect
+
+
 def add_post(request):
     value_1 = request.POST.get("value_1")
     value_2 = request.POST.get("value_2")
@@ -32,7 +35,7 @@ def add_post(request):
 
     return render(
         request,
-        'calculator/add.html',
+        'calculator/add_post.html',
     )
 
 

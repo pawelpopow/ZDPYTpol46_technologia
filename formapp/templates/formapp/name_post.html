@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <form>
+    <form method="POST">{% csrf_token %}
         <input type='text' name="name" placeholder="imie">
         <input type="submit" value="Wyślij">
     </form>
