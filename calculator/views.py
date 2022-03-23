@@ -22,9 +22,6 @@ def add(request):
         )
 
 
-from django.shortcuts import render, redirect
-
-
 def add_post(request):
     value_1 = request.POST.get("value_1")
     value_2 = request.POST.get("value_2")
