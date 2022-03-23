@@ -9,7 +9,7 @@ def name_get(request):
             request,
             'formapp/hello.html',
             context={
-                "name": name,
+                'name': name,
             }
         )
 
@@ -23,13 +23,7 @@ def name_post(request):
     name = request.POST.get('name')
 
     if name:
-        return render(
-            request,
-            'formapp/hello.html',
-            context={
-                'name': name,
-            }
-        )
+        return redirect('formapp:hello', name=name)
 
     return render(
         request,
@@ -40,6 +34,8 @@ def name_post(request):
 def hello(request, name):
     return render(
         request,
-        'formapp/hello.html'
-        
+        'formapp/hello.html',
+        context={
+            'name': name,
+        }
     )

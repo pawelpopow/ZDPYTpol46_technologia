@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form method="POST">{% csrf_token %}
+      <input type="number" name="value_1">
+      <input type="number" name="value_2">
+      <input type="submit" value="Oblicz">
+  </form>
+</body>
+</html>
