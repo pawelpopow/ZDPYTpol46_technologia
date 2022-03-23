@@ -5,5 +5,5 @@ from formapp import views
 app_name = 'formapp'
 
 urlpatterns = {
-    path('name/', views.name, name='name'),
+    path('name-get/', views.name_get, name='name_get'),
 }
