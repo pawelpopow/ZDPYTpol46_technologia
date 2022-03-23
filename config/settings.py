@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'mem.apps.MemConfig',
     'linkapp.apps.LinkappConfig',
     'formapp.apps.FormappConfig',
+    'calculator.apps.CalculatorConfig',
 ]
 
 MIDDLEWARE = [
