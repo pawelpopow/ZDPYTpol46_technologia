@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'linkapp.apps.LinkappConfig',
     'formapp.apps.FormappConfig',
     'calculator.apps.CalculatorConfig',
+    'taskapp.apps.TaskappConfig',
 ]
 
 MIDDLEWARE = [

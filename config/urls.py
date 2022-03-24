@@ -25,4 +25,5 @@ urlpatterns = [
     path('link/', include('linkapp.urls')),
     path('formapp/', include('formapp.urls')),
     path('calculator/', include('calculator.urls')),
+    path('task/', include('taskapp.urls')),
 ]
