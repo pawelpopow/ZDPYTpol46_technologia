@@ -1,13 +1,19 @@
 from django.shortcuts import render, redirect
 
-TASKS = []
+# Pamięć ulotna RAM
+# TASKS = []
 
 
 def task_create_view(request):
     task = request.POST.get('task')
 
     if task:
-        TASKS.append(task)
+        # Pamięć ulotna RAM
+        # TASKS.append(task)
+
+        # Pamięc trwała - plik
+        with open('tasks.txt', 'a+') as f:
+            f.write(f"{task}\n")
 
         return redirect('taskapp:task_list_view')
 
@@ -18,10 +24,14 @@ def task_create_view(request):
 
 
 def task_list_view(request):
+    # Pamięc trwała - plik
+    with open('tasks.txt', 'r') as f:
+        tasks = f.readlines()
+
     return render(
         request,
         'taskapp/task-list.html',
         context={
-            'tasks': TASKS,
+            'tasks': tasks,
         }
     )
