@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'formapp.apps.FormappConfig',
     'calculator.apps.CalculatorConfig',
     'taskapp.apps.TaskappConfig',
+    'chinook.apps.ChinookConfig',
+    'census.apps.CensusConfig',
 ]
 
 MIDDLEWARE = [
@@ -86,8 +88,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME': BASE_DIR / 'chinook.sqlite',
+        'NAME': BASE_DIR / 'census.sqlite',
     }
+
 }
 
 
