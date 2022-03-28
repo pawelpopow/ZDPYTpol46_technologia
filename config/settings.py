@@ -88,9 +88,35 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'chinook.sqlite',
         'NAME': BASE_DIR / 'census.sqlite',
-    }
+    },
+
+    # 'chinook': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'chinook.sqlite',
+    # }
+
+    # # postgres
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '5432',  # nie trzeba, bo 5432 to domyślny port postgres, ale
+    #     # gdyby był inny to już trzeba wskazać
+    #     'NAME': 'zdpytpol46',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'admin',
+    # }
+
+    # # mysql
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '3306',  # nie trzeba, bo 3306 to domyślny port mysql, ale
+    #     # gdyby był inny to już trzeba wskazać
+    #     'NAME': 'zdpytpol46',
+    #     'USER': 'root',
+    #     'PASSWORD': os.getenv('MYSQL_PASSW'),
+    # }
 
 }
 
