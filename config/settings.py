@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'taskapp.apps.TaskappConfig',
     'chinook.apps.ChinookConfig',
     'census.apps.CensusConfig',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

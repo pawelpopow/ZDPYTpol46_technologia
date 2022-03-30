@@ -20,6 +20,9 @@ class Census(models.Model):
         managed = False
         db_table = 'census'
 
+    def __str__(self):
+        return f"{self.state} {self.age} {self.sex} {self.pop2008}"
+
 
 class StateFact(models.Model):
     id = models.AutoField(blank=True, primary_key=True)
