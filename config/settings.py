@@ -91,11 +91,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'census.sqlite',
     },
 
-    # 'chinook': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'chinook.sqlite',
-    # }
-
+    'db2': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db2.sqlite',
+    }
 }
 
 
