@@ -80,3 +80,19 @@ def task_update_view(request, pk):
             'task': task,
         }
     )
+
+
+def task_delete_view(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+
+    if request.method == "POST":
+        task.delete()
+        return redirect('taskapp:task-list')
+
+    return render(
+        request,
+        'taskapp/task_confirm_delete.html',
+        context={
+            'task': task,
+        }
+    )
