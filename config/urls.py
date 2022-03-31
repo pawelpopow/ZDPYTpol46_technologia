@@ -23,7 +23,8 @@ urlpatterns = [
     path('isitnewyear/', include('newyear.urls')),
     path('mem/', include('mem.urls')),
     path('link/', include('linkapp.urls')),
-    path('formapp/', include('formapp.urls')),
+    path('formapp2/', include('formapp.urls')),
     path('calculator/', include('calculator.urls')),
     path('task/', include('taskapp.urls')),
+    path('formapp2/', include('formapp2.urls')),
 ]

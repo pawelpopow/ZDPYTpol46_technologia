@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'chinook.apps.ChinookConfig',
     'census.apps.CensusConfig',
     'django_extensions',
+    'formapp2.apps.Formapp2Config',
 ]
 
 MIDDLEWARE = [
