@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Widok zadania</title>
-</head>
-<body>
+{% extends 'taskapp/layout.html' %}
+
+{% block body %}
     <h2>Zadanie numer {{ task.id }}</h2>
     <p>{{ task.name }}</p>
     <a href="{% url 'taskapp:task-list' %}"><button>Wróć do listy zadań</button></a>
-</body>
-</html>
+{% endblock body %}

@@ -1,12 +1,6 @@
+{% extends 'taskapp/layout.html' %}
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Formularz</title>
-</head>
-<body>
+{% block body %}
   {% if task %}
     <h2>Zmodyfikuj zadanie</h2>
   {% else %}
@@ -27,5 +21,4 @@
       {% endif %}
   </form>
   <a href="{% url 'taskapp:task-list' %}"><button>Wróc do listy</button></a>
-</body>
-</html>
+{% endblock body %}

@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'taskapp/layout.html' %}
+
+{% block title %}Potwierdź usunięcie{% endblock %}
+
+{% block body %}
   <h2>Usuwanie zadania</h2>
   <form method="POST" style="display: inline;">{% csrf_token %}
     <p>Czy jesteś pewien, że chcesz usunąć zadanie {{ task.name }} ?</p>
     <input type="submit" value="Potwierdź">
   </form>
   <a href="{% url 'taskapp:task-list' %}"><button>Anuluj</button></a>
-</body>
-</html>
+{% endblock body %}
