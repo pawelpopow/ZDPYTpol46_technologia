@@ -5,10 +5,25 @@
     <title>Formularz</title>
 </head>
 <body>
-  <h2>Zarejestruj zadanie</h2>
+  {% if task %}
+    <h2>Zmodyfikuj zadanie</h2>
+  {% else %}
+    <h2>Zarejestruj zadanie</h2>
+  {% endif %}
+
   <form method="POST">{% csrf_token %}
-      <input type="text" name="task" placeholder="task">
-      <input type="submit" value="Zarejestruj">
+      {% if task %}
+        <input type="text" name="task" value="{{ task.name }}" placeholder="task">
+      {% else %}
+        <input type="text" name="task" placeholder="task">
+      {% endif %}
+
+      {% if task %}
+          <input type="submit" value="Zmień">
+      {% else %}
+          <input type="submit" value="Zarejestruj">
+      {% endif %}
   </form>
+  <a href="{% url 'taskapp:task-list' %}"><button>Wróc do listy</button></a>
 </body>
 </html>

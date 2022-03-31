@@ -5,10 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-  <h2>Zadania do zrealizowania</h2>
+  <h2 style="display:inline">Zadania do zrealizowania</h2>
+  <a href="{% url 'taskapp:task-create' %}"><button>Nowy</button></a>
   <ol>
       {% for task in tasks %}
-        <li>{{ task.name }}</li>
+        <li>
+            <a href="{% url 'taskapp:task-detail' task.id %}">{{ task.name }}</a>
+            <a href="{% url 'taskapp:task-update' task.id %}"><button>Zmień</button></a>
+        </li>
       {% endfor %}
   </ol>
 </body>
