@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Message(models.Model):
+    
     CHOICES = [
         ("q", "Pytanie"),
         ("o", "Inne")
