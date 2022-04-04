@@ -27,4 +27,5 @@ urlpatterns = [
     path('calculator/', include('calculator.urls')),
     path('task/', include('taskapp.urls')),
     path('formapp2/', include('formapp2.urls')),
+    path('viewapp/', include('viewapp.urls')),
 ]

@@ -1,4 +1,3 @@
-
 from django import forms
 
 from formapp2.models import Message
@@ -22,7 +21,7 @@ class ContactForm(forms.Form):
 class MessageForm(forms.ModelForm):
     class Meta:
         model = Message
-        fields = '__all__'
+        fields = "__all__"
         labels = {
             "name": "Imię",
         }

@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'census.apps.CensusConfig',
     'django_extensions',
     'formapp2.apps.Formapp2Config',
+    'viewapp.apps.ViewappConfig',
 ]
 
 MIDDLEWARE = [
