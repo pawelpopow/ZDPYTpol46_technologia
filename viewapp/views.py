@@ -1,9 +1,11 @@
 from django.shortcuts import render, HttpResponse
 from django.shortcuts import get_object_or_404, redirect
+from django.urls import reverse_lazy
 from django import views
 
 from django.views.generic import TemplateView
 from django.views.generic import DetailView
+from django.views.generic import CreateView
 
 from viewapp.models import Person
 from viewapp.forms import PersonForm
@@ -121,7 +123,7 @@ def create_person(request):
         if form.is_valid():
             form.save()
 
-            return redirect('viewapp:hello')
+        return redirect('viewapp:hello')
 
     form = PersonForm()
     return render(
@@ -132,4 +134,30 @@ def create_person(request):
         }
     )
 
-    
+
+# class-based view
+class PersonCreateView(views.View):
+    def get(self, request):
+        form = PersonForm()
+        return render(
+            request,
+            'viewapp/person_form.html',
+            context={
+                'form': form,
+            }
+        )
+
+    def post(self, request):
+        form = PersonForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+
+        return redirect('viewapp:hello')
+
+
+# generic view
+class PersonCreateView2(CreateView):
+    model = Person
+    fields = '__all__'
+    # success_url = reverse_lazy('viewapp:hello')
