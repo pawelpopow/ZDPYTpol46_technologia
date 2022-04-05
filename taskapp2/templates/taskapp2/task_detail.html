@@ -1,0 +1,7 @@
+{% extends 'taskapp2/layout.html' %}
+
+{% block body %}
+    <h2>Zadanie numer {{ task.id }}</h2>
+    <p>{{ task.name }}</p>
+    <a href="{% url 'taskapp2:task-list' %}"><button>Wróć do listy zadań</button></a>
+{% endblock body %}

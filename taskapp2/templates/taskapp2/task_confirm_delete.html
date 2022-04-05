@@ -1,4 +1,4 @@
-{% extends 'taskapp/../../../taskapp/templates/taskapp/layout.html' %}
+{% extends 'taskapp2/layout.html' %}
 
 {% block title %}Potwierdź usunięcie{% endblock %}
 
@@ -8,5 +8,6 @@
     <p>Czy jesteś pewien, że chcesz usunąć zadanie {{ task.name }} ?</p>
     <input type="submit" value="Potwierdź">
   </form>
-  <a href="{% url 'taskapp:task-list' %}"><button>Anuluj</button></a>
+
+  <a href="{% url 'taskapp2:task-list' %}"><button>Anuluj</button></a>
 {% endblock body %}

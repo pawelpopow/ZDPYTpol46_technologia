@@ -1,0 +1,15 @@
+{% extends 'taskapp2/layout.html' %}
+
+{% block body %}
+      <h2 style="display:inline">Zadania do zrealizowania</h2>
+      <a href="{% url 'taskapp2:task-create' %}"><button class="btn btn-primary">Nowy</button></a>
+      <ol>
+          {% for task in object_list %}
+            <li style="margin:1em;">
+                <a href="{% url 'taskapp2:task-detail' task.id %}">{{ task.name }}</a>
+                <a href="{% url 'taskapp2:task-update' task.id %}"><button class="btn btn-primary">Zmień</button></a>
+                <a href="{% url 'taskapp2:task-delete' task.id %}"><button class="btn btn-danger">Usuń</button></a>
+            </li>
+          {% endfor %}
+      </ol>
+{% endblock body %}

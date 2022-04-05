@@ -1,0 +1,15 @@
+{% extends 'taskapp2/layout.html' %}
+
+{% block body %}
+  {% if task %}
+    <h2>Zmodyfikuj zadanie</h2>
+  {% else %}
+    <h2>Zarejestruj zadanie</h2>
+  {% endif %}
+
+  <form method="POST">{% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Zapisz">
+  </form>
+  <a href="{% url 'taskapp2:task-list' %}"><button>Wróc do listy</button></a>
+{% endblock body %}
