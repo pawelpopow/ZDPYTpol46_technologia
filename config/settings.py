@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'viewapp.apps.ViewappConfig',
     'taskapp2.apps.Taskapp2Config',
     'authapp.apps.AuthappConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'authapp:home'
