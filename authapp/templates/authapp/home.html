@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Witaj {{ user }}!
+    {% if user.is_authenticated %}
+        <a href="{% url 'authapp:logout' %}"><button>Wyloguj</button></a>
+    {% endif %}
+</body>
+</html>
